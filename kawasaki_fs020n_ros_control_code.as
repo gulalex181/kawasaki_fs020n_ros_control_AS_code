@@ -143,7 +143,7 @@
             DECOMPOSE .jt[1] = #HERE
             ; Формируем строку ответа клиенту
             .$data = $ENCODE(.version, ERROR, SWITCH(RUN), SWITCH(REPEAT), SWITCH(TEACH_LOCK), SWITCH(POWER), TASK(1) == 1)
-            .$data = .$data + $ENCODE(/F8.3, TIMER(1), .jt[1], .jt[2], .jt[3], .jt[4], .jt[5], .jt[6])
+            .$data = .$data + $ENCODE(/F10.3, TIMER(1), .jt[1], .jt[2], .jt[3], .jt[4], .jt[5], .jt[6])
             ; Добавляем завершающий пробел
             .$buf[1] = .$data + " "
             ; Отправляем ответ клиенту с таймаутом 2 секунды
